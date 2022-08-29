@@ -1,10 +1,13 @@
 <?php 
 
+// Creating subclass
+
+
 require_once 'bankaccount.php';
 
-class SavingAccount extends BankAccount
+class ProfessionalAccount extends BankAccount
 {
-    private $limit;
+    public $limit;
 
     public function __construct($n, $a, $l)
     {

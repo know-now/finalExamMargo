@@ -1,6 +1,8 @@
 <?php 
 require_once 'bankaccount.php';
 
+// Creating Subclass
+
 class SavingAccount extends BankAccount
 {
     public $interest;
@@ -12,11 +14,12 @@ class SavingAccount extends BankAccount
        
 }
 
-public function retrieve_interest()
-    {  
-        return  $retrInt = $this->interest * $this->amount; }
+// Retrieving interest
 
- 
+
+public function retrieve_interest()
+    {  $retrInt = $this->interest * $this->amount;
+        return $retrInt; }
 }
 
 

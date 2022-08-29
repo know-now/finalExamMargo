@@ -11,6 +11,9 @@
 
 <body>
     <h2>Insert a new candy</h2>
+
+<!-- Candy form -->
+
     <form method="post">
         <input type="text" name="name" placeholder="Name of the candy"> <br>
         <input type="text" name="price" placeholder="Price of the candy"> <br>
@@ -27,6 +30,8 @@
         <input type="submit" name="submitBtn" value="Insert" id="submitBtn">
     </form>
     <div id="result"></div>
+
+<!-- Fetching the data -->
 
     <script>
         document.querySelector("form").addEventListener('submit', function(event) {

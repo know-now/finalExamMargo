@@ -1,5 +1,5 @@
 <?php
-
+// Verifications
 $errors = array();
 if (empty($_POST['name'])) {
     $errors['name'] = 'Name of the candy is required <br>';
@@ -16,6 +16,9 @@ if (count($errors) == 0) {
     $price = $_POST['price'];
     $category = $_POST['categ_id'];
     echo "Form is OK <br>";
+
+// Connecting to DB
+
     $conn = mysqli_connect('localhost', 'root', '', 'candy_shop');
     if ($conn) {
         echo 'Connected successfully<br>';
@@ -28,6 +31,9 @@ if (count($errors) == 0) {
             echo 'Problem inserting.';
         }
     }
+
+// Showing errors
+
 } else {
     foreach ($errors as $error) {
         echo "Error: " . $error . "\n";

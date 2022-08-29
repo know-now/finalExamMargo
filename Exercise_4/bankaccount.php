@@ -9,12 +9,17 @@ class BankAccount
     private $accnum;
     private $amount;
     
+// Constructing
+
+
     public function __construct($n, $a)
     {
         $this->set_accnum($n);
         $this->set_amount($a);
        
     }
+
+    // Setters and getters for BankAccount
 
     public function set_accnum($newAccnum)
     {
@@ -36,14 +41,8 @@ class BankAccount
             $this->amount = $newamount;
         else echo "Amount of money should be a number <br>";
     }
-    
-    // public function getInfos()
-    // {
-    //     $properties =  array(
-    //         $this->get_accnum(),
-    //         $this->get_amount());
-    //     return $properties;
-    // }
+
+    // Withdraw function
 
     public function withdraw($w)
     {  echo " My bank balance is equal to " . $this->get_amount() . "euro <br>.";
